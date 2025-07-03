@@ -139,4 +139,26 @@ class Customer
     {
         $this->password = md5($password);
     }
+
+    public function toArray(array $exclude = []): array
+    {
+        $data = [
+            'id' => $this->id,
+            'fullName' => $this->firstName.' '.$this->lastName,
+            'firstName' => $this->firstName,
+            'lastName' => $this->lastName,
+            'gender' => $this->gender,
+            'country' => $this->country,
+            'city' => $this->city,
+            'phone' => $this->phone,
+            'email' => $this->email,
+            'username' => $this->username,
+        ];
+
+        foreach ($exclude as $field) {
+            unset($data[$field]);
+        }
+
+        return $data;
+    }
 }

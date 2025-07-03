@@ -2,11 +2,14 @@
 
 namespace App\Services\CustomerRecord;
 
+use App\DTO\CustomerDTO;
+use App\DTO\CustomerListDTO;
 use App\Entities\Customer;
 use Doctrine\DBAL\Exception as DoctrineDBALException;
 use Doctrine\ORM\EntityManagerInterface;
 use Exception;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use Throwable;
 
@@ -19,26 +22,48 @@ class CustomerRecordService implements CustomerRecordInterface
         $this->entityManager = $entityManager;
     }
 
-    public function updateOrCreateCustomer(array $data): void
+    /**
+     * @throws Throwable
+     * @throws DoctrineDBALException
+     */
+    public function updateOrCreateCustomer(array $customer): void
     {
-        $customer = $this->entityManager->getRepository(Customer::class)
-            ->findOneBy(['email' => $data['email']]);
+        $this->entityManager->getConnection()->beginTransaction();
 
-        if (! $customer) {
-            $customer = new Customer;
-            $customer->setEmail($data['email']);
+        try {
+            $customerEntity = $this->entityManager->getRepository(Customer::class)
+                ->findOneBy(['email' => $customer['email']]);
+
+            $isNew = false;
+
+            if (! $customerEntity) {
+                $customerEntity = new Customer;
+                $customerEntity->setEmail($customer['email']);
+                $isNew = true;
+            }
+
+            $customerEntity->setFirstName($customer['name']['first']);
+            $customerEntity->setLastName($customer['name']['last']);
+            $customerEntity->setGender($customer['gender']);
+            $customerEntity->setCountry($customer['location']['country']);
+            $customerEntity->setCity($customer['location']['city']);
+            $customerEntity->setPhone($customer['phone']);
+            $customerEntity->setUsername($customer['login']['username']);
+            $customerEntity->setPassword($customer['login']['password']);
+
+            if ($isNew) {
+                $this->entityManager->persist($customerEntity);
+            }
+
+            $this->entityManager->flush();
+            $this->entityManager->getConnection()->commit();
+
+        } catch (Throwable $exception) {
+            $this->entityManager->getConnection()->rollBack();
+            logger()->error($exception);
+            throw $exception;
         }
 
-        $customer->setFirstName($data['name']['first']);
-        $customer->setLastName($data['name']['last']);
-        $customer->setGender($data['gender']);
-        $customer->setCountry($data['location']['country']);
-        $customer->setCity($data['location']['city']);
-        $customer->setPhone($data['phone']);
-        $customer->setUsername($data['login']['username']);
-        $customer->setPassword($data['login']['password']);
-
-        $this->entityManager->persist($customer);
     }
 
     /**
@@ -79,6 +104,76 @@ class CustomerRecordService implements CustomerRecordInterface
 
         } catch (Throwable $exception) {
             $this->entityManager->getConnection()->rollBack();
+            logger()->error($exception);
+            throw $exception;
+        }
+    }
+
+    /**
+     * @throws Throwable
+     */
+    public function getCustomer(int $customerId, array $filters = []): array
+    {
+        try {
+            $selectFields = $filters['select'] ?? [];
+
+            $alias = 'c';
+
+            if (empty($selectFields)) {
+                $selectFields = ['c'];
+            } else {
+                $selectFields = array_map(fn ($field) => "$alias.".Str::camel($field), $selectFields);
+            }
+
+            $result = $this->entityManager->createQueryBuilder()
+                ->select($selectFields)
+                ->from(Customer::class, $alias)
+                ->setParameter('id', $customerId)
+                ->where($alias.'.id = :id')
+                ->getQuery()
+                ->getOneOrNullResult();
+
+            if (! $result) {
+                return [];
+            }
+
+            return (new CustomerDTO($result))->toArray();
+        } catch (Throwable $exception) {
+            logger()->error($exception);
+            throw $exception;
+        }
+    }
+
+    /**
+     * @throws Exception
+     * @throws Throwable
+     */
+    public function getCustomers(array $filters = []): array
+    {
+        try {
+            $selectFields = $filters['select'] ?? [];
+
+            $alias = 'c';
+
+            if (empty($selectFields)) {
+                $selectFields = ['c'];
+            } else {
+                $selectFields = array_map(fn ($field) => "$alias.".Str::camel($field), $selectFields);
+            }
+
+            $qb = $this->entityManager->createQueryBuilder()
+                ->select($selectFields)
+                ->from(Customer::class, $alias);
+
+            $results = $qb->getQuery()->getArrayResult();
+
+            return array_map(fn ($row) => (new CustomerListDTO(
+                $row['firstName'],
+                $row['lastName'],
+                $row['email'],
+                $row['country']
+            ))->toArray(), $results);
+        } catch (Throwable $exception) {
             logger()->error($exception);
             throw $exception;
         }
