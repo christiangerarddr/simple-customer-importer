@@ -27,6 +27,13 @@ class CustomerController extends Controller
 
             $customers = $this->customerRecord->getCustomers($filters);
 
+            if (empty($customers)) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'No customers found',
+                ], 404);
+            }
+
             return response()->json([
                 'success' => true,
                 'customers' => $customers,
@@ -63,6 +70,13 @@ class CustomerController extends Controller
             ];
 
             $customer = $this->customerRecord->getCustomer($customerId, $filters);
+
+            if (empty($customer)) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Customer does not exist',
+                ], 404);
+            }
 
             return response()->json([
                 'success' => true,

@@ -1,0 +1,290 @@
+{
+    "results": [
+        {
+            "gender": "female",
+            "name": {
+                "title": "Mrs",
+                "first": "Tonya",
+                "last": "Collins"
+            },
+            "location": {
+                "street": {
+                    "number": 5367,
+                    "name": "Railroad St"
+                },
+                "city": "Anchorage",
+                "state": "Florida",
+                "country": "United States",
+                "postcode": 61980,
+                "coordinates": {
+                    "latitude": "84.7366",
+                    "longitude": "135.7257"
+                },
+                "timezone": {
+                    "offset": "-2:00",
+                    "description": "Mid-Atlantic"
+                }
+            },
+            "email": "tonya.collins@example.com",
+            "login": {
+                "uuid": "f2658a02-9036-40fe-9069-bd7bf6d71ce0",
+                "username": "purplepanda859",
+                "password": "greg",
+                "salt": "anzb94Ka",
+                "md5": "ebf207fd6f4ca0353ca65be2eec490e6",
+                "sha1": "36a7cbc6e2d8ff5c6d58b3bdcfb3913670f29190",
+                "sha256": "28daaa07aeb036de0b02972e850b177108c5a5046fca2b303ed389264a5d6cd7"
+            },
+            "dob": {
+                "date": "1969-10-01T12:56:34.522Z",
+                "age": 55
+            },
+            "registered": {
+                "date": "2017-03-04T13:25:19.836Z",
+                "age": 8
+            },
+            "phone": "(584) 279-0817",
+            "cell": "(723) 733-5068",
+            "id": {
+                "name": "SSN",
+                "value": "050-87-4968"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/96.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/96.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/96.jpg"
+            },
+            "nat": "US"
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "Mrs",
+                "first": "Tatiana",
+                "last": "Dokić"
+            },
+            "location": {
+                "street": {
+                    "number": 595,
+                    "name": "Borova"
+                },
+                "city": "Vrbas",
+                "state": "Peć",
+                "country": "Serbia",
+                "postcode": 20340,
+                "coordinates": {
+                    "latitude": "56.9390",
+                    "longitude": "-131.4414"
+                },
+                "timezone": {
+                    "offset": "+9:00",
+                    "description": "Tokyo, Seoul, Osaka, Sapporo, Yakutsk"
+                }
+            },
+            "email": "tatiana.dokic@example.com",
+            "login": {
+                "uuid": "bb35a559-0ac0-480e-b7fb-edfd26e01f71",
+                "username": "whitefrog352",
+                "password": "pitch",
+                "salt": "DuSnB6kc",
+                "md5": "fcde9d68d83cdf24585d4400358e3cfb",
+                "sha1": "72a0e1416c19ea19a6fce84800bb86df04608288",
+                "sha256": "88e17502499f6789516a71d3424ae4d3273f7227aba03024d3828247fdcbc841"
+            },
+            "dob": {
+                "date": "1959-02-21T19:07:36.624Z",
+                "age": 66
+            },
+            "registered": {
+                "date": "2013-08-30T21:35:48.426Z",
+                "age": 11
+            },
+            "phone": "038-1318-707",
+            "cell": "066-2886-976",
+            "id": {
+                "name": "SID",
+                "value": "056339914"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/17.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/17.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/17.jpg"
+            },
+            "nat": "RS"
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "Mr",
+                "first": "Jesse",
+                "last": "Ellis"
+            },
+            "location": {
+                "street": {
+                    "number": 7190,
+                    "name": "The Drive"
+                },
+                "city": "Portarlington",
+                "state": "Kilkenny",
+                "country": "Ireland",
+                "postcode": 85980,
+                "coordinates": {
+                    "latitude": "-3.8794",
+                    "longitude": "-61.1811"
+                },
+                "timezone": {
+                    "offset": "+5:00",
+                    "description": "Ekaterinburg, Islamabad, Karachi, Tashkent"
+                }
+            },
+            "email": "jesse.ellis@example.com",
+            "login": {
+                "uuid": "b37e20be-5449-42bd-951e-c0bb4debec90",
+                "username": "orangerabbit945",
+                "password": "jackpot",
+                "salt": "zlovnhar",
+                "md5": "a1d878865949cd6387d5a51dff4a01e6",
+                "sha1": "9f64d370b51ac526ad382f5394ee703162b9937b",
+                "sha256": "d8db9a301353c91a9300a4223c858c6bd6f024174a2103738fea3aa7b21b29a9"
+            },
+            "dob": {
+                "date": "1983-09-22T08:37:00.027Z",
+                "age": 41
+            },
+            "registered": {
+                "date": "2010-01-22T21:00:59.354Z",
+                "age": 15
+            },
+            "phone": "011-328-4395",
+            "cell": "081-810-7047",
+            "id": {
+                "name": "PPS",
+                "value": "2685957T"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/men/60.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/men/60.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/men/60.jpg"
+            },
+            "nat": "IE"
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "Ms",
+                "first": "Clara",
+                "last": "Lopez"
+            },
+            "location": {
+                "street": {
+                    "number": 7455,
+                    "name": "Hickory Creek Dr"
+                },
+                "city": "New York",
+                "state": "Texas",
+                "country": "United States",
+                "postcode": 50220,
+                "coordinates": {
+                    "latitude": "12.8793",
+                    "longitude": "43.2282"
+                },
+                "timezone": {
+                    "offset": "-4:00",
+                    "description": "Atlantic Time (Canada), Caracas, La Paz"
+                }
+            },
+            "email": "clara.lopez@example.com",
+            "login": {
+                "uuid": "55ff1771-73ab-4dc7-9623-5310478cfb69",
+                "username": "greentiger430",
+                "password": "1988",
+                "salt": "hUN3SnuK",
+                "md5": "e916531b4a0da20c97cf7335dd634ce0",
+                "sha1": "5b32f71a06c49d2bf48952312c24541a504a4234",
+                "sha256": "c97ef2347134ca10170a14cc9c460a7ebdcc53f725e62287e5d6a6630ef4c683"
+            },
+            "dob": {
+                "date": "1971-02-01T19:33:41.882Z",
+                "age": 54
+            },
+            "registered": {
+                "date": "2007-02-07T09:56:27.781Z",
+                "age": 18
+            },
+            "phone": "(279) 767-9218",
+            "cell": "(971) 890-4766",
+            "id": {
+                "name": "SSN",
+                "value": "676-90-9756"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/9.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/9.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/9.jpg"
+            },
+            "nat": "US"
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "Mrs",
+                "first": "Tanya",
+                "last": "Hamilton"
+            },
+            "location": {
+                "street": {
+                    "number": 8115,
+                    "name": "W Sherman Dr"
+                },
+                "city": "Coffs Harbour",
+                "state": "Victoria",
+                "country": "Australia",
+                "postcode": 9419,
+                "coordinates": {
+                    "latitude": "-88.8101",
+                    "longitude": "-59.5061"
+                },
+                "timezone": {
+                    "offset": "-3:00",
+                    "description": "Brazil, Buenos Aires, Georgetown"
+                }
+            },
+            "email": "tanya.hamilton@example.com",
+            "login": {
+                "uuid": "4d75e8d1-0b07-4b4a-a8f8-bfc38e4b59d7",
+                "username": "yellowmeercat648",
+                "password": "dude",
+                "salt": "if3BfaHH",
+                "md5": "bf8a8a4d5f5bea523d7440ae3617e65e",
+                "sha1": "19f101cb11dd1ffaf9a82071ba87c86ee46094ec",
+                "sha256": "3182f192d64472314a9b312f72ed80252abfa694bb9042851ecdb005dab34747"
+            },
+            "dob": {
+                "date": "1984-11-19T04:31:45.056Z",
+                "age": 40
+            },
+            "registered": {
+                "date": "2018-09-30T11:01:50.205Z",
+                "age": 6
+            },
+            "phone": "09-9580-6311",
+            "cell": "0403-946-141",
+            "id": {
+                "name": "TFN",
+                "value": "426086844"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/32.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/32.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/32.jpg"
+            },
+            "nat": "AU"
+        }
+    ],
+    "info": {
+        "seed": "7699f6885ba693c5",
+        "results": 5,
+        "page": 1,
+        "version": "1.4"
+    }
+}
