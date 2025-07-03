@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\RandomUserImporter;
+namespace App\Services\CustomerRecord;
 
 interface CustomerRecordInterface
 {

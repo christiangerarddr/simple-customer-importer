@@ -2,19 +2,18 @@
 
 namespace App\Console\Commands;
 
-use App\Services\CustomerRecord\CustomerImporterInterface;
-use App\Services\RandomUserImporter\CustomerRecordInterface;
+use App\Services\RandomUserImporter\CustomerImporterInterface;
 use Illuminate\Console\Command;
 use Throwable;
 
-class ImportUser extends Command
+class ImportUsers extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'app:import-user {--results=100} {--nationality=AU}';
+    protected $signature = 'app:import-users {--results=100} {--nationality=AU}';
 
     /**
      * The console command description.

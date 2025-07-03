@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\RandomUserImporter;
+namespace App\Services\CustomerRecord;
 
 use App\Entities\Customer;
 use Doctrine\DBAL\Exception as DoctrineDBALException;

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services\CustomerRecord;
+namespace App\Services\RandomUserImporter;
 
-use App\Services\RandomUserImporter\CustomerRecordInterface;
+use App\Services\CustomerRecord\CustomerRecordInterface;
 use App\Utils\ApiClient;
 use Doctrine\DBAL\Exception as DoctrineDBALException;
 use Throwable;

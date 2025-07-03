@@ -2,10 +2,10 @@
 
 namespace App\Providers;
 
-use App\Services\CustomerRecord\CustomerImporterInterface;
-use App\Services\CustomerRecord\RandomUserImporterService;
-use App\Services\RandomUserImporter\CustomerRecordInterface;
-use App\Services\RandomUserImporter\CustomerRecordService;
+use App\Services\CustomerRecord\CustomerRecordInterface;
+use App\Services\CustomerRecord\CustomerRecordService;
+use App\Services\RandomUserImporter\CustomerImporterInterface;
+use App\Services\RandomUserImporter\RandomUserImporterService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
